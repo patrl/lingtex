@@ -1,0 +1,50 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{lingtex}[2018/09/23 lingtex]
+
+% tree drawing macros
+\PassOptionsToPackage{linguistics}{forest}
+\RequirePackage{forest}
+
+% example sentences
+% \RequirePackage{expex}
+
+% tables
+\RequirePackage{booktabs}
+
+% acronyms
+\PassOptionsToPackage{nolist}{acronym}
+\RequirePackage{acronym}
+
+% misc
+% \RequirePackage{multicol}
+\RequirePackage{todonotes}
+
+% sidenotes
+% \RequirePackage{scrlayer-notecolumn}
+
+% font setup
+
+% bib stuff
+\PassOptionsToPackage{
+  backend=biber
+, bibstyle=biblatex-sp-unified
+, citestyle=sp-authoryear-comp
+, url=false
+, doi=false
+, bibencoding=utf8}{biblatex}
+
+\RequirePackage{biblatex}
+
+% maths stuff
+\RequirePackage{braket}
+
+% font stuff
+\RequirePackage{microtype}
+\RequirePackage{fontspec}
+\PassOptionsToPackage{math-style=ISO}{unicode-math}
+\RequirePackage{unicode-math}
+\defaultfontfeatures{Scale=MatchLowercase}
+\setmainfont{Minion Pro}
+\setsansfont{Myriad Pro}
+\setmathfont{STIX Two Math}
+\setmonofont{SF Mono}
