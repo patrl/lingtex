@@ -1,0 +1,1 @@
+\input{ling-common.def}
