@@ -7,6 +7,7 @@
 \input{ling-common.def}
 
 \RequirePackage[margin=1in]{geometry}
+\RequirePackage{parskip}
 
 % use sans serif for headings
 \setkomafont{disposition}{\normalcolor\sffamily\addfontfeature{Letters=Uppercase,Kerning=Uppercase}}
