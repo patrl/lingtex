@@ -72,7 +72,7 @@
   \end{tabular}
 }
 
-\newcommand{\eval}[2][]{\ensuremath{\left\llbracket text{#2} \right\rrbracket^{#1}}}
+\newcommand{\eval}[2][]{\ensuremath{\left\llbracket \text{#2} \right\rrbracket^{#1}}}
 \newcommand{\evalm}[2][]{\ensuremath{\left\llbracket #2 \right\rrbracket^{#1}}}
 \newcommand{\citeposs}[1]{\citeauthor{#1}'s (\citeyear{#1})}
 \newcommand{\citepossalt}[1]{\citeauthor{#1}'s \citeyear{#1}}
