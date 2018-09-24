@@ -33,6 +33,7 @@
 % misc
 % \RequirePackage{multicol}
 \RequirePackage{todonotes}
+\RequirePackage{hyperref}
 
 %%% Local Variables:
 %%% mode: latex
