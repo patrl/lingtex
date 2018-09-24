@@ -22,3 +22,5 @@
 \setsansfont{Myriad Pro}
 \setmathfont{STIX Two Math}
 \setmonofont{SF Mono}
+
+\RequirePackage{expex}

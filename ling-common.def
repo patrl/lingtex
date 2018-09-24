@@ -1,5 +1,10 @@
 \ProvidesFile{ling-common.def}[2018/09/24 Common code for the lingtex classes]
 
+% example sentences
+% TODO full LaTeX wrapper for expex
+% \RequirePackage{expex}
+% \renewenvironment{ex}{\ex}{\xe}
+
 % tree drawing macros
 \PassOptionsToPackage{linguistics}{forest}
 \RequirePackage{forest}
@@ -28,11 +33,6 @@
 % misc
 % \RequirePackage{multicol}
 \RequirePackage{todonotes}
-
-% example sentences
-% TODO full LaTeX wrapper for expex
-\RequirePackage{expex}
-\renewenvironment{ex}{\ex}{\xe}
 
 %%% Local Variables:
 %%% mode: latex

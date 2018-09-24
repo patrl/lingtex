@@ -15,3 +15,5 @@
 % font setup
 \RequirePackage{unicode-math}
 \setmathfont{Fira Math}
+
+\RequirePackage{expex}

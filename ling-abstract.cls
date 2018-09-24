@@ -25,13 +25,6 @@
 \setmathfont{STIX Two Math}
 \setmonofont{SF Mono}
 
-% no spacing between examples
-\lingset{
-  aboveexskip=0pt,
-  belowexskip=0pt,
-  interpartskip=0pt,
-  belowpreambleskip=0pt}
-
 % don't list all editors in bib
 \renewbibmacro*{byeditor+others}{%
   \setunit{\addcomma\space}%
@@ -62,3 +55,12 @@
 
 \clearpairofpagestyles
 \chead{\@title}
+
+\RequirePackage{expex}
+
+% no spacing between examples
+\lingset{
+  aboveexskip=0pt,
+  belowexskip=0pt,
+  interpartskip=0pt,
+  belowpreambleskip=0pt}
