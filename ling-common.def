@@ -25,14 +25,14 @@
 \PassOptionsToPackage{nolist}{acronym}
 \RequirePackage{acronym}
 
+% misc
+% \RequirePackage{multicol}
+\RequirePackage{todonotes}
+
 % example sentences
 % TODO full LaTeX wrapper for expex
 \RequirePackage{expex}
 \renewenvironment{ex}{\ex}{\xe}
-
-% misc
-% \RequirePackage{multicol}
-\RequirePackage{todonotes}
 
 %%% Local Variables:
 %%% mode: latex
