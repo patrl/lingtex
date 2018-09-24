@@ -105,6 +105,6 @@ font=\footnotesize
   \begin{tabular}[t]{@{}l@{}}%
 }%
 
-\RequirePackage{parskip}
+% \RequirePackage{parskip}
 
 \RequirePackage{expex}

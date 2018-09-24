@@ -25,6 +25,7 @@
 
 % maths stuff
 \RequirePackage{braket}
+\RequirePackage{stmaryrd}
 
 % acronyms
 \PassOptionsToPackage{nolist}{acronym}
@@ -34,6 +35,45 @@
 % \RequirePackage{multicol}
 \RequirePackage{todonotes}
 \RequirePackage{hyperref}
+
+% towers macros stolen from Simon Charlow:
+% requires the booktabs package
+\newcommand\semtower[2]{% a 2-level semantic tower
+  \begin{tabular}[c]{@{\,}c@{\,}}
+    \(#1\)
+    \\
+    \midrule
+    \(#2\)
+    \\
+  \end{tabular}
+}
+\newcommand\tower[3]{% a 2-level type/category tower
+  \begin{tabular}[c]{@{\,}c@{\,}}
+    \(\hfil #1\ \vrule width .05em\ #2 \hfil\)
+    \\
+    \midrule
+    \(#3\)
+    \\
+  \end{tabular}
+}
+
+\newcommand{\eval}[2][]{\ensuremath{\left\llbracket text{#2} \right\rrbracket^{#1}}}
+\newcommand{\evalm}[2][]{\ensuremath{\left\llbracket #2 \right\rrbracket^{#1}}}
+\newcommand{\citeposs}[1]{\citeauthor{#1}'s (\citeyear{#1})}
+\newcommand{\citepossalt}[1]{\citeauthor{#1}'s \citeyear{#1}}
+\newcommand{\sub}[1]{\textsubscript{#1}}
+\newcommand{\supscr}[1]{\textsuperscript{#1}}
+\newcommand{\type}[1]{\ensuremath{\mathsf{#1}}}
+\newcommand{\ml}[1]{\ensuremath{\textsf{#1}}}
+\newcommand{\dmroot}[1]{\ensuremath{\sqrt{\text{#1}}}}
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+\newcommand{\trace}[1][]{\textit{t\textsubscript{#1}}}
+\newcommand{\bracketStr}[2][]{[\textsubscript{#1}\,{#2}\,]}
+\newcommand{\powerset}[1]{\ensuremath{𝒫(#1)}}
+\newcommand{\strawsonEntails}{\ensuremath{⊧_S}}
+\newcommand{\nstrawsonEntails}{\ensuremath{̸⊧_S}}
+
 
 %%% Local Variables:
 %%% mode: latex
