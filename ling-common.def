@@ -33,7 +33,7 @@
 \RequirePackage{acronym}
 
 % misc
-% \RequirePackage{multicol}
+\RequirePackage{multicol}
 \RequirePackage{todonotes}
 \RequirePackage{hyperref}
 
