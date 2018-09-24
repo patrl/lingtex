@@ -1,4 +1,4 @@
-\ProvidesFile{ling-common.def}[2018/09/23 Common code for the Ling-TeX styles]
+\ProvidesFile{ling-common.def}[2018/09/24 Common code for the lingtex classes]
 
 % tree drawing macros
 \PassOptionsToPackage{linguistics}{forest}
@@ -26,8 +26,9 @@
 \RequirePackage{acronym}
 
 % example sentences
+% TODO full LaTeX wrapper for expex
 \RequirePackage{expex}
-\newenvironment{ex}{\ex}{\xe}
+\renewenvironment{ex}{\ex}{\xe}
 
 % misc
 % \RequirePackage{multicol}
