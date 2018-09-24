@@ -26,6 +26,7 @@
 % maths stuff
 \RequirePackage{braket}
 \RequirePackage{stmaryrd}
+\RequirePackage{amsmath}
 
 % acronyms
 \PassOptionsToPackage{nolist}{acronym}
