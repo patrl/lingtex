@@ -1,0 +1,7 @@
+\ProvidesFile{ling-examples.def}[2018/09/24 Common code for example sentences in the lingtex classes]
+
+% example sentences:
+\RequirePackage{expex}
+% fix for conflict between expex and unicode-math, as described here: https://tex.stackexchange.com/questions/97845/expex-glosses-get-broken-when-unicode-math-is-loaded-in-xelatex-and-lualatex
+\let\expexgla\gla
+\AtBeginDocument{\let\gla\expexgla}
