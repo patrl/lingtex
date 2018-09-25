@@ -43,6 +43,7 @@
 % misc
 \RequirePackage{multicol}
 \RequirePackage{todonotes}
+\RequirePackage{csquotes}
 
 \RequirePackage{hyperref}
 \hypersetup{colorlinks=true,linktocpage=true,breaklinks=true,urlcolor=CTurl,linkcolor=CTlink,citecolor=CTcitation}
