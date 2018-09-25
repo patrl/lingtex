@@ -9,15 +9,25 @@ Custom LaTeX classes for linguists with a Syn-Sem bias (WIP).
 Everything except for STIX2 should be available on, e.g., a recent version of
 OSX as a system font.
 
-Serif
- ~ [Minion Pro](https://typekit.com/fonts/minion)
-Sans Serif
- ~ [Myriad Pro](https://typekit.com/fonts/myriad)
-Math
- ~ [STIX2](https://sourceforge.net/projects/stixfonts/)
-Monospace
- ~ [San Francisco Mono](https://github.com/ZulwiyozaPutra/SF-Mono-Font)
- 
+<dl>
+  <dt>Serif</dt>
+  <dd>
+  [Minion Pro](https://typekit.com/fonts/minion)
+  </dd>
+  <dt>Sans Serif</dt>
+  <dd>
+  [Myriad Pro](https://typekit.com/fonts/myriad)
+  </dd>
+  <dt>Math</dt>
+  <dd>
+  [STIX2](https://sourceforge.net/projects/stixfonts/)
+  </dd>
+  <dt>Monospace</dt>
+  <dd>
+  [San Francisco Mono](https://github.com/ZulwiyozaPutra/SF-Mono-Font)
+  </dd>
+</dl>
+
 ### Details
 
 All custom classes use the KOMA-Script `scrartcl` class as a base-class. The
@@ -25,7 +35,10 @@ classes are set-up with the expectation that documents will be compiled via
 `xelatex`. Math formulae can be entered directly as unicode (although LaTeX math
 commands should work too), e.g.:
 
-(@) $λ P . λ Q . P ∩ Q ≠ ∅$
+``` tex
+\(λ P . λ Q . P ∩ Q ≠ ∅\)
+```
+
 
 #### `ling-abstract`
 
@@ -38,13 +51,21 @@ bibliography all serve to maximize space.
 
 ### Font prerequisites
 
-Sans Serif
- ~ [Fira Sans](https://fonts.google.com/specimen/Fira+Sans)
-Math
- ~ [Fira Math](https://github.com/Stone-Zeng/FiraMath)
-Monospace
- ~ [Fira Mono](https://fonts.google.com/specimen/Fira+Mono)
- 
+<dl>
+  <dt>Sans Serif</dt>
+  <dd>
+  [Fira Sans](https://fonts.google.com/specimen/Fira+Sans)
+  </dd>
+  <dt>Math</dt>
+  <dd>
+  [Fira Math](https://github.com/Stone-Zeng/FiraMath)
+  </dd>
+  <dt>Monospace</dt>
+  <dd>
+  [Fira Mono](https://fonts.google.com/specimen/Fira+Mono)
+  </dd>
+</dl>
+
 ### Details
 
 Based on the now ubiquitous [metropolis beamer
