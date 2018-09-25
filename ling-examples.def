@@ -6,3 +6,15 @@
 % fix for conflict between expex and unicode-math, as described here: https://tex.stackexchange.com/questions/97845/expex-glosses-get-broken-when-unicode-math-is-loaded-in-xelatex-and-lualatex
 \let\expexgla\gla
 \AtBeginDocument{\let\gla\expexgla}
+
+\DeclareDocumentCommand \tikzexsetup {} {%
+  \tikzstyle{every picture}+=[remember picture, inner sep=0pt,baseline, anchor=base]}
+% arg 1: optional strut; arg 2: node name; arg 3: node content
+\DeclareDocumentCommand \ND {s m m} {%
+  \tikzifinpicture{}{\tikz}\node(#2){\IfBooleanTF{#1}{\strut}{}#3};}
+
+\definelingstyle{exarrbelow}{belowexskip=1em plus 0.375em minus 0.25em}
+
+%%% Local Variables:
+%%% mode: latex
+%%% End:
