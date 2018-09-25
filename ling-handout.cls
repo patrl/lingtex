@@ -94,6 +94,7 @@ font=\footnotesize
 }
 \RequirePackage{makeidx}
 
+% flush title, author and date to the left:
 \RequirePackage{xpatch}
 \makeatletter
 \xpatchcmd{\@maketitle}{\begin{center}}{\begin{flushleft}}{}{}
@@ -105,6 +106,5 @@ font=\footnotesize
   \begin{tabular}[t]{@{}l@{}}%
 }%
 
-% \RequirePackage{parskip}
-
-\RequirePackage{expex}
+% common code for example sentences (must be loaded late)
+\input{ling-examples.def}

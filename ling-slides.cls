@@ -16,4 +16,4 @@
 \RequirePackage{unicode-math}
 \setmathfont{Fira Math}
 
-\RequirePackage{expex}
+\input{ling-examples.def}

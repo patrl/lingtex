@@ -18,11 +18,20 @@
 \PassOptionsToPackage{math-style=ISO}{unicode-math}
 \defaultfontfeatures{Scale=MatchLowercase}
 \setmainfont{Minion Pro}
-\setsansfont{Myriad Pro}
+\setsansfont{Myriad Pro Light}
 \RequirePackage{unicode-math}
 \setmathfont{STIX Two Math}
 \setmonofont{SF Mono}
 
-\RequirePackage{expex}
-\let\expexgla\gla
-\AtBeginDocument{\let\gla\expexgla}
+\RequirePackage{xpatch}
+\makeatletter
+\xpatchcmd{\@maketitle}{\begin{center}}{\begin{flushleft}}{}{}
+\xpatchcmd{\@maketitle}{\end{center}}{\end{flushleft}}{}{}
+\xpatchcmd{\@maketitle}{\begin{tabular}[t]{c}}{\begin{tabular}[t]{@{}l@{}}}{}{}
+\makeatother
+\renewcommand*\and{%
+  \end{tabular}\\
+  \begin{tabular}[t]{@{}l@{}}%
+}%
+
+\input{ling-examples.def}

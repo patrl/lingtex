@@ -57,7 +57,7 @@
 \clearpairofpagestyles
 \chead{\@title}
 
-\RequirePackage{expex}
+\input{ling-examples.def}
 
 % no spacing between examples
 \lingset{
