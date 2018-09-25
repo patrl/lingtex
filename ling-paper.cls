@@ -17,8 +17,44 @@
 \RequirePackage{fontspec}
 \PassOptionsToPackage{math-style=ISO}{unicode-math}
 \defaultfontfeatures{Scale=MatchLowercase}
-\setmainfont{Minion Pro}
-\setsansfont{Myriad Pro}
+
+\setmainfont[%
+    UprightFeatures={
+        SizeFeatures={
+            {Size={-8.4},Font=MinionPro-Capt},
+            {Size={8.4-13},Font=MinionPro-Regular},
+            {Size={13-19.9},Font=MinionPro-Subh},
+            {Size={19.9-},Font=MinionPro-Disp}
+        },
+    },
+    BoldFeatures={
+        SizeFeatures={
+            {Size={-8.4},Font=MinionPro-BoldCapt},
+            {Size={8.4-13},Font=MinionPro-Bold},
+            {Size={13-19.9},Font=MinionPro-BoldSubh},
+            {Size={19.9-},Font=MinionPro-BoldDisp}
+        },
+    },
+    ItalicFeatures={
+        SizeFeatures={
+            {Size={-8.4},Font=MinionPro-ItCapt},
+            {Size={8.4-13},Font=MinionPro-It},
+            {Size={13-19.9},Font=MinionPro-ItSubh},
+            {Size={19.9-},Font=MinionPro-ItDisp}
+            },
+    },
+    BoldItalicFeatures={
+        SizeFeatures={
+            {Size={-8.4},Font=MinionPro-BoldItCapt},
+            {Size={8.4-13},Font=MinionPro-BoldIt},
+            {Size={13-19.9},Font=MinionPro-BoldItSubh},
+            {Size={19.9-},Font=MinionPro-BoldItDisp}
+        },
+    },
+]{Minion Pro}
+
+\setsansfont]{Myriad Pro}
+
 \RequirePackage{unicode-math}
 \setmathfont{STIX Two Math}
 \setmonofont{SF Mono}
