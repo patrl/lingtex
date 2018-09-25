@@ -1,6 +1,6 @@
-\documentclass{ling-abstract}
+\documentclass[12pt]{ling-abstract}
 
-% \usepackage{kantlipsum}
+\usepackage{kantlipsum}
 
 \addbibresource[location=remote]{/home/patrl/GitHub/bibliography/elliott_mybib.bib}
 
@@ -11,23 +11,43 @@
 
 \begin{document}
 
-% \section{Introduction} \kant[1-2]
+\section{Introduction} \kant[1-2]
 
-% \section{Example test} \kant[3]
+\ex
+Example test.
+\xe
 
-% \kant[4]
+\section{Next section} \kant[3]
+
+\pex
+\a Another example
+\a Yet another example
+\xe
+
+\kant[4]
 
 % \section{Math test} \kant[5]
 
 % \kant[6]
 
+\section{Citation test} \citet{heimThesis,heim1994,heim1997,heim_presupposition_1992}.
+
+\kant[5]
+
+\begin{multicols}{2}
 \ex
-...
+Yet another ANOTHER example.
 \xe
-
-\section{Citation test}
-
-\citet{heimThesis,heim1994,heim1997,heim_presupposition_1992}.
+\columnbreak
+\ex
+\begin{forest}
+[{S}
+  [{NP}]
+  [{VP}]
+]
+\end{forest}
+\xe
+\end{multicols}
 
 \noindent \textsc{References:}\printbibliography[heading=none]
 
