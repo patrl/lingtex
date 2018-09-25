@@ -53,7 +53,7 @@
     },
 ]{Minion Pro}
 
-\setsansfont]{Myriad Pro}
+\setsansfont{Myriad Pro}
 
 \RequirePackage{unicode-math}
 \setmathfont{STIX Two Math}
