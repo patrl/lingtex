@@ -7,9 +7,9 @@
 \input{ling-common.def}
 
 % use sans serif for headings
-\setkomafont{disposition}{\normalcolor\sffamily\addfontfeature{Letters=Uppercase,Kerning=Uppercase}}
-\setkomafont{author}{\normalcolor\sffamily}
-\setkomafont{date}{\normalcolor\sffamily}
+\setkomafont{disposition}{\normalcolor\headingfont\addfontfeature{Letters=Uppercase,Kerning=Uppercase}}
+\setkomafont{author}{\normalcolor\headingfont}
+\setkomafont{date}{\normalcolor\headingfont}
 
 % font setup
 % TODO conditionalise on xe/luatex
@@ -18,10 +18,11 @@
 \PassOptionsToPackage{math-style=ISO}{unicode-math}
 \defaultfontfeatures{Scale=MatchLowercase}
 \setmainfont{Minion Pro}
-\setsansfont{Myriad Pro Light}
+\setsansfont{Myriad Pro}
 \RequirePackage{unicode-math}
 \setmathfont{STIX Two Math}
 \setmonofont{SF Mono}
+\newfontfamily\headingfont[]{Myriad Pro Light}
 
 \RequirePackage{xpatch}
 \makeatletter

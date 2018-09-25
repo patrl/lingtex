@@ -106,5 +106,7 @@ font=\footnotesize
   \begin{tabular}[t]{@{}l@{}}%
 }%
 
+% \RequirePackage{beamerarticle}
+
 % common code for example sentences (must be loaded late)
 \input{ling-examples.def}
