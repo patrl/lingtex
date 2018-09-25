@@ -16,11 +16,13 @@
 \RequirePackage{microtype}
 \RequirePackage{fontspec}
 \PassOptionsToPackage{math-style=ISO}{unicode-math}
-\RequirePackage{unicode-math}
 \defaultfontfeatures{Scale=MatchLowercase}
 \setmainfont{Minion Pro}
 \setsansfont{Myriad Pro}
+\RequirePackage{unicode-math}
 \setmathfont{STIX Two Math}
 \setmonofont{SF Mono}
 
 \RequirePackage{expex}
+\let\expexgla\gla
+\AtBeginDocument{\let\gla\expexgla}
