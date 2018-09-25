@@ -9,24 +9,10 @@ Custom LaTeX classes for linguists with a Syn-Sem bias (WIP).
 Everything except for STIX2 should be available on, e.g., a recent version of
 OSX as a system font.
 
-<dl>
-  <dt>Serif</dt>
-  <dd>
-  [Minion Pro](https://typekit.com/fonts/minion)
-  </dd>
-  <dt>Sans Serif</dt>
-  <dd>
-  [Myriad Pro](https://typekit.com/fonts/myriad)
-  </dd>
-  <dt>Math</dt>
-  <dd>
-  [STIX2](https://sourceforge.net/projects/stixfonts/)
-  </dd>
-  <dt>Monospace</dt>
-  <dd>
-  [San Francisco Mono](https://github.com/ZulwiyozaPutra/SF-Mono-Font)
-  </dd>
-</dl>
+- Main font: [Minion Pro](https://typekit.com/fonts/minion)
+- Sans serif: [Myriad Pro](https://typekit.com/fonts/myriad)
+- Math: [STIX2](https://sourceforge.net/projects/stixfonts/)
+- Monospace: [San Francisco Mono](https://github.com/ZulwiyozaPutra/SF-Mono-Font)
 
 ### Details
 
@@ -51,20 +37,9 @@ bibliography all serve to maximize space.
 
 ### Font prerequisites
 
-<dl>
-  <dt>Sans Serif</dt>
-  <dd>
-  [Fira Sans](https://fonts.google.com/specimen/Fira+Sans)
-  </dd>
-  <dt>Math</dt>
-  <dd>
-  [Fira Math](https://github.com/Stone-Zeng/FiraMath)
-  </dd>
-  <dt>Monospace</dt>
-  <dd>
-  [Fira Mono](https://fonts.google.com/specimen/Fira+Mono)
-  </dd>
-</dl>
+- Main font: [Fira Sans](https://fonts.google.com/specimen/Fira+Sans)
+- Math: [Fira Math](https://github.com/Stone-Zeng/FiraMath)
+- Monospace: [Fira Mono](https://fonts.google.com/specimen/Fira+Mono)
 
 ### Details
 
