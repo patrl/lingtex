@@ -1,8 +1,9 @@
-\documentclass[parskip=half]{ling-handout}
+\documentclass[12pt,paper=a4,DIV=15]{ling-handout}
 
 \usepackage{kantlipsum}
+\usepackage{minted}
 
-\title{My Title}
+\title{Handout title}
 
 \author{Patrick D.\,Elliott}
 
@@ -10,39 +11,53 @@
 
 \maketitle
 
-\section{Introduction}
-
-\kant[1-2]
-
-
 \begin{addmargin}[0pt]{.3\textwidth}
 
-Hey there.\sidenote{Here is a sidenote.}
+\section{Introduction}
 
+\begin{itemize}
 
-\kant[3]
+  \item Some sentences. Some sentences. Some sentences. Some sentences. Some sentences. Some sentences.
 
-\end{addmargin}
+  \item Some sentences.
 
-\syncwithnotecolumns[paragraphs]
+  \item Some sentences.\sidenote{Here is a sidenote.}
 
 \ex
 This is an example
 \xe
 
+\end{itemize}
+
+\section{Math test}
+
 \ex
-\(λ x . λ y . y = x\)
+\(\eval{and\(_{\type{τ → τ → τ}}\)} = \begin{cases}
+∧ &\type{τ = t}\\
+λ P_{\type{ρ → σ}} . λ Q_{\type{ρ → σ}} . λx_{\type{ρ}} . \eval{and\(_{\type{σ → σ → σ}}\)} (P x) (Q x) & \type{τ = ρ → σ}
+\end{cases}\)
 \xe
 
-Yo
+\section{Code test}
 
-\section{Citation test}
+\begin{minted}[linenos,tabsize=2,breaklines]{haskell}
+newtype CCP a = CCP { (>>-) :: (G Identity a -> G Identity T) -> G Identity T }
 
-\section{Example math}
+instance Functor CCP where
+  fmap f cx = CCP $ \k -> cx >>- \x -> k (fmap f x)
 
-\section{Mono test}
+instance Applicative CCP where
+  pure a = CCP $ \k -> k (pure a)
+  cf <*> cx = CCP $ \k -> cf >>- \f -> cx >>- \x -> k (f <*> x)
 
-\texttt{hi there}
+instance Monad CCP where
+  return = pure
+  cgx >>= f = CCP $ \k -> cgx >>- \gx -> gx >>= (\x -> f x >>- k)
+\end{minted}
+
+\syncwithnotecolumns[paragraphs]
+
+\end{addmargin}
 
 \printbibliography
 
@@ -52,4 +67,5 @@ Yo
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: t
+%%% TeX-command-extra-options: "-shell-escape"
 %%% End:
