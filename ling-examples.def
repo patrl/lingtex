@@ -15,6 +15,10 @@
 
 \definelingstyle{exarrbelow}{belowexskip=1em plus 0.375em minus 0.25em}
 
+\usetikzlibrary{arrows.meta}
+
+\tikzset{exarrows/.style={semithick,arrows={-Stealth[scale=1, scale length=1,scale width=1]}}}
+
 %%% Local Variables:
 %%% mode: latex
 %%% End:
