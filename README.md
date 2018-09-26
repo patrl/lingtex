@@ -1,6 +1,16 @@
-# Lingtex
+# Lingtex (WIP)
 
-Custom LaTeX classes for linguists with a Syn-Sem bias (WIP).
+Custom LaTeX classes for linguists with a Syn-Sem bias.
+
+## TODO
+
+- Fix xcolor option clash in `ling-handout`.
+- Allow single markdown source to be compiled as both `ling-handout` and
+  `ling-slides`. This should be straightforward, since `ling-handout` already
+  uses `beamerarticle`.
+- Prettify headings in `ling-handout`.
+- Add example of `ling-sidenotes` usage.
+- Add options for users of `pdflatex`.
 
 ## Paper, handout, and abstract
 
