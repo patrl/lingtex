@@ -1,11 +1,11 @@
 \ProvidesFile{ling-common.def}[2018/09/24 Common code for the lingtex classes]
 
+% necessary for custom macros
+\RequirePackage{xparse}
+
 % tree drawing macros
 \PassOptionsToPackage{linguistics}{forest}
 \RequirePackage{forest}
-
-% tables
-\RequirePackage{booktabs}
 
 % bib stuff
 \PassOptionsToPackage{
@@ -32,9 +32,11 @@
 \RequirePackage{todonotes}
 \RequirePackage{csquotes}
 
+% tables and towers
+\RequirePackage{booktabs}
 % Simon Charlow's tower macro (https://gist.github.com/schar/2cd7de8af510e0cbeefb26720f389d59)
 % requires the booktabs package
-\newcommand\semtower[2]{% a 2-level semantic tower
+\NewDocumentCommand\semtower{mm}{% a 2-level semantic tower
   \begin{tabular}[c]{@{\,}c@{\,}}
     \(#1\)
     \\
@@ -43,7 +45,7 @@
     \\
   \end{tabular}
 }
-\newcommand\tower[3]{% a 2-level type/category tower
+\NewDocumentCommand\tower{mmm}{% a 2-level type/category tower
   \begin{tabular}[c]{@{\,}c@{\,}}
     \(\hfil #1\ \vrule width .05em\ #2 \hfil\)
     \\
@@ -53,23 +55,36 @@
   \end{tabular}
 }
 
-\newcommand{\eval}[2][]{\ensuremath{\left\llbracket \text{#2} \right\rrbracket^{#1}}}
-\newcommand{\evalm}[2][]{\ensuremath{\left\llbracket #2 \right\rrbracket^{#1}}}
-\newcommand{\citeposs}[1]{\citeauthor{#1}'s (\citeyear{#1})}
-\newcommand{\citepossalt}[1]{\citeauthor{#1}'s \citeyear{#1}}
-\newcommand{\sub}[1]{\textsubscript{#1}}
-\newcommand{\supscr}[1]{\textsuperscript{#1}}
-\newcommand{\type}[1]{\ensuremath{\mathsf{#1}}}
-\newcommand{\ml}[1]{\ensuremath{\textsf{#1}}}
-\newcommand{\dmroot}[1]{\ensuremath{\sqrt{\text{#1}}}}
-\newcommand{\cmark}{\ding{51}}%
-\newcommand{\xmark}{\ding{55}}%
-\newcommand{\trace}[1][]{\textit{t\textsubscript{#1}}}
-\newcommand{\bracketStr}[2][]{[\textsubscript{#1}\,{#2}\,]}
-\newcommand{\powerset}[1]{\ensuremath{𝒫(#1)}}
-\newcommand{\strawsonEntails}{\ensuremath{⊧_S}}
-\newcommand{\nstrawsonEntails}{\ensuremath{̸⊧_S}}
-\newcommand{\fade}[1]{\textcolor{gray}{#1}}
+% macro for the interpretation function. Requires stmaryrd
+\NewDocumentCommand\eval{sO{}O{}m}{%
+  \IfBooleanTF#1
+  {\ensuremath{\left\llbracket{#4}\right\rrbracket^{#2}_{#3}}}
+  {\ensuremath{\left\llbracket\text{#4}\right\rrbracket^{#2}_{#3}}}
+}
+
+\NewDocumentCommand{\citeposs}{m}{\citeauthor{#1}'s (\citeyear{#1})}
+\NewDocumentCommand{\citepossalt}{m}{\citeauthor{#1}'s \citeyear{#1}}
+
+\NewDocumentCommand{\sub}{m}{\textsubscript{#1}}
+\NewDocumentCommand{\supscr}{m}{\textsuperscript{#1}}
+
+\NewDocumentCommand\type{m}{\ensuremath{\mathsf{#1}}}
+
+\NewDocumentCommand\ml{m}{\ensuremath{\textsf{#1}}}
+
+\NewDocumentCommand\dmroot{m}{\ensuremath{\sqrt{\text{#1}}}}
+
+% requires pifont
+\RequirePackage{pifont}
+\NewDocumentCommand\cmark{}{\ding{51}}%
+\NewDocumentCommand\xmark{}{\ding{55}}%
+
+\NewDocumentCommand\trace{O{}}{\textit{t\textsubscript{#1}}}
+\NewDocumentCommand\bracketStr{O{}m}{[\textsubscript{#1}\,{#2}\,]}
+\NewDocumentCommand\powerset{m}{\ensuremath{𝒫(#1)}}
+\NewDocumentCommand\strawsonEntails{}{\ensuremath{⊧_S}}
+\NewDocumentCommand\nstrawsonEntails{}{\ensuremath{̸⊧_S}}
+\NewDocumentCommand\fade{m}{\textcolor{gray}{#1}}
 
 %%% Local Variables:
 %%% mode: latex
