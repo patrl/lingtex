@@ -5,6 +5,7 @@
 \LoadClassWithOptions{scrartcl}
 
 \input{ling-common.def}
+\input{ling-links.def}
 
 % use sans serif for headings
 \setkomafont{disposition}{\normalcolor\headingfont\addfontfeature{Letters=Uppercase,Kerning=Uppercase}}
