@@ -1,35 +1,34 @@
 \documentclass[12pt,paper=a4,DIV=15]{ling-handout}
 
 \usepackage{kantlipsum}
-\usepackage{minted}
+
+\addbibresource[location=remote]{/home/patrl/GitHub/bibliography/elliott_mybib.bib}
 
 \title{Handout title}
 
 \author{Patrick D.\,Elliott}
 
-\begin{document}
+ \begin{document}
 
 \maketitle
 
-\begin{addmargin}[0pt]{.3\textwidth}
-
 \section{Introduction}
+
+\begin{frame}{test frame}
 
 \begin{itemize}
 
-  \item Some sentences. Some sentences. Some sentences. Some sentences. Some sentences. Some sentences.
+\item \kant[1]
 
-  \item Some sentences.
+\item \kant[2]
 
-  \item Some sentences.\sidenote{Here is a sidenote.}
-
-\ex
-This is an example
-\xe
+\item \citet{fox-sub22,fox2007fc,Fox2007,barLevFox2017,fox_economy_2018}
 
 \end{itemize}
 
-\section{Math test}
+\end{frame}
+
+\begin{frame}{some math}
 
 \ex
 \(\eval{and\(_{\type{τ → τ → τ}}\)} = \begin{cases}
@@ -38,7 +37,9 @@ This is an example
 \end{cases}\)
 \xe
 
-\section{Code test}
+\end{frame}
+
+\begin{frame}{some code}
 
 \begin{minted}[linenos,tabsize=2,breaklines]{haskell}
 newtype CCP a = CCP { (>>-) :: (G Identity a -> G Identity T) -> G Identity T }
@@ -55,12 +56,13 @@ instance Monad CCP where
   cgx >>= f = CCP $ \k -> cgx >>- \gx -> gx >>= (\x -> f x >>- k)
 \end{minted}
 
-\syncwithnotecolumns[paragraphs]
+\end{frame}
 
-\end{addmargin}
+% \begin{frame}{References}
 
 \printbibliography
 
+% \end{frame}
 
 \end{document}
 

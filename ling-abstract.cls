@@ -5,6 +5,7 @@
 \LoadClassWithOptions{scrartcl}
 
 \input{ling-common.def}
+\input{ling-links.def}
 
 \RequirePackage[margin=1in]{geometry}
 \RequirePackage{parskip}
