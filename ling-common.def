@@ -69,6 +69,7 @@
 \newcommand{\powerset}[1]{\ensuremath{𝒫(#1)}}
 \newcommand{\strawsonEntails}{\ensuremath{⊧_S}}
 \newcommand{\nstrawsonEntails}{\ensuremath{̸⊧_S}}
+\newcommand{\fade}[1]{\textcolor{gray}{#1}}
 
 %%% Local Variables:
 %%% mode: latex
