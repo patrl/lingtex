@@ -25,6 +25,13 @@ commands should work too), e.g.:
 \(λ P . λ Q . P ∩ Q ≠ ∅\)
 ```
 
+If you use emacs, there are multiple possibilities for entering unicode symbols
+efficiently. I use the [Agda input
+method](https://github.com/agda/agda/blob/master/src/data/emacs-mode/agda-input.el)
+distributed with the main agda release. The [company
+math](https://github.com/vspinu/company-math) unicode backend also works well,
+when set up to work with xelatex and unicode math, as described [here](https://www.emacswiki.org/emacs/company-math).
+
 
 #### `ling-abstract`
 
