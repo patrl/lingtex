@@ -44,3 +44,5 @@
 
 % common code for example sentences (must be loaded late)
 \input{ling-examples.def}
+
+\usepackage{minted}
