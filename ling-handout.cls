@@ -8,7 +8,6 @@
 \input{ling-links.def}
 
 \usepackage{beamerarticle}
-\PassOptionsToPackage{dvipsnames}{xcolor}
 % \usebeamercolortheme[snowy]{owl}
 
 % use sans serif for headings
