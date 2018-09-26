@@ -2,13 +2,15 @@
 
 \addbibresource[location=remote]{/home/patrl/GitHub/bibliography/elliott_mybib.bib}
 
-\title{My title\thanks{acknowledgements here}}
+\title{Ling-paper\thanks{acknowledgements here}}
 
-\author{Patrick D.\,Elliott
+\author{Patrick D.\,Elliott\\Leibniz-Zentrum Allgemeine Sprachwissenschaft
 \and
-someone else
+someone else\\
+institution
 \and
-another person}
+another person\\
+another institution}
 
 \usepackage{kantlipsum}
 
@@ -20,56 +22,55 @@ another person}
 \kant[1]
 \end{abstract}
 
-\section{Example test}
+\section{Introduction}
+
+\kant[2]
 
 \ex
 \begingl
-\gla Hans hat//
-\glb shl daa//
+\gla When hat Klaus angerufen?//
+\glb Who.{\Acc} has Klaus called?//
+\glft \enquote{Who did Klaus call?}//
 \endgl
 \xe
 
-\ex
-This is an example
-\xe
-
-\ex
-\(λ x . λ y . y = x\)
-\xe
-
-\ex[lingstyle=exarrbelow]\tikzexsetup%
-{}\ND*{wh2}{Hi} \ND*{wh1}{there}.
+\ex~[lingstyle=exarrbelow]\tikzexsetup%
+{}\ND*{wh2}{Who} did Klaus call \ND*{wh1}{t}?
 \begin{tikzpicture}[overlay]
 \draw [exarrows] (wh1.south) -- ++(south:1.5ex) -| (wh2.south);
 \end{tikzpicture}
 \xe
 
-Yo
-
-\section{Citation test}
-
-\cite{heim_presupposition_1992}
-
-\section{Example math}
-
-
-
-\[
-\left\llbracket
+\ex
+\(\left\llbracket
 \begin{array}{c}
 \begin{forest}
-[{S}
-  [{NP}]
-  [{VP}]
+[{CP}
+  [{Who}]
+  [{C'}
+    [{C\sub{Q}\\did}]
+    [{TP}
+      [{DP} [{Klaus},roof]]
+      [{T'}
+        [{T}]
+        [{VP}
+          [{V\\call}]
+          [{\trace}]
+]
+]
+]
+]
 ]
 \end{forest}
 \end{array}
-\right\rrbracket
-\]
+\right\rrbracket = \set{p | ∃ x ∈ D_{e}[p = λw . \ml{Klaus} \ml{call}_{w} x]}\)
+\xe
 
-\section{Mono test}
+\kant[3]
 
-\texttt{hi there}
+\section{Citation test}
+
+See \citet{heim_presupposition_1992,heim1997,heim1994,heimThesis}.
 
 \printbibliography
 
