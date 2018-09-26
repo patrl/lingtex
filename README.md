@@ -2,6 +2,14 @@
 
 Custom LaTeX classes for linguists with a Syn-Sem bias.
 
+## Usage
+
+You can install this class by manually linking the `.cls` and `.def` files to an
+appropriate location in your `TEXMFHOME` directory (find where this is by
+running `kpsewhich -var-value=TEXMFHOME` in the terminal). Alternatively, just
+include the `.def` files and whichever `.cls` files you want to use in the same
+directory as your `.tex` file.
+
 ## TODO
 
 - Fix xcolor option clash in `ling-handout`.
