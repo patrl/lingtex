@@ -54,7 +54,9 @@
 
 \PassOptionsToPackage{math-style=french}{unicode-math}
 \RequirePackage{unicode-math}
-\setmathfont{STIX Two Math}
+% \setmathfont{STIX Two Math}
+\setmathfont{libertinusmath-regular.otf}
+% \setmathfont[version=bold]{libertinusmath-bold.otf}
 \setmathfont{Minion Pro}[range=up]
 \setmathfont{Minion Pro Italic}[range=it]
 \setmathfont{Minion Pro Bold}[range=bfup]
@@ -63,6 +65,7 @@
 \setmathfont{Myriad Pro Italic}[range=sfit]
 \setmathfont{Myriad Pro Bold}[range=bfsfup]
 \setmathfont{Myriad Pro Bold Italic}[range=bfsfit]
+\setmathfont{Minion Pro Italic}[range={scr,bfscr,cal,bfcal},Contextuals=Swash]
 \setmathfont{SF Mono}[range=tt]
 \setmonofont{SF Mono}
 \newfontfamily\headingfont[]{Myriad Pro Light}
