@@ -57,6 +57,8 @@
 % \setmathfont{STIX Two Math}
 \setmathfont{libertinusmath-regular.otf}
 % \setmathfont[version=bold]{libertinusmath-bold.otf}
+\setmathfont{STIX Two Math}[range={\lBrace,\rBrace}]
+% \setmathfont[version=bold]{libertinusmath-bold.otf}
 \setmathfont{Minion Pro}[range=up]
 \setmathfont{Minion Pro Italic}[range=it]
 \setmathfont{Minion Pro Bold}[range=bfup]
