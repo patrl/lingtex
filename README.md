@@ -32,7 +32,7 @@ OSX as a system font.
 
 ### Details
 
-All custom classes use the KOMA-Script `scrartcl` class as a base-class. The
+The
 classes are set-up with the expectation that documents will be compiled via
 `xelatex`. Math formulae can be entered directly as unicode (although LaTeX math
 commands should work too), e.g.:
@@ -48,10 +48,17 @@ distributed with the main agda release. The [company
 math](https://github.com/vspinu/company-math) unicode backend also works well,
 when set up to work with xelatex and unicode math, as described [here](https://www.emacswiki.org/emacs/company-math).
 
+#### `ling-paper`
+
+Uses `memoir` as the base class.
+
+### `ling-handout`
+
+Uses `scrartcl` as the base class.
 
 #### `ling-abstract`
 
-To satisfy the most common
+Uses `scrartcl` as a base class. To satisfy the most common
 abstract requirements, margins are set to 1 inch, and font size to 12pt.
 Additional modifications, such as custom section headers, title, and
 bibliography all serve to maximize space.
