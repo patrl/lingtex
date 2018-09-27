@@ -52,7 +52,7 @@
 
 \setsansfont{Myriad Pro}
 
-\PassOptionsToPackage{math-style=french}{unicode-math}
+\PassOptionsToPackage{math-style=ISO}{unicode-math}
 \RequirePackage{unicode-math}
 % \setmathfont{STIX Two Math}
 \setmathfont{libertinusmath-regular.otf}
