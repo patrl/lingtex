@@ -2,32 +2,24 @@
 \ProvidesClass{ling-paper}[2018/09/24 ling-paper]
 
 % load the base class
+\PassOptionsToClass{12pt,a4paper,oneside,article,openany}{memoir}
 \LoadClassWithOptions{memoir}
 
 % colors stolen from classicthesis:
 \PassOptionsToPackage{dvipsnames}{xcolor}
-\RequirePackage{xcolor} % [dvipsnames]
-\definecolor{CTsemi}{gray}{0.55} % chapter numbers will be semi transparent .5 .55 .6 .0
-\definecolor{CTcitation}{rgb}{0,0.5,0} % WebGreen
-\definecolor{CTurl}{named}{Maroon} % Maroon
-\definecolor{CTtitle}{named}{Maroon} % Maroon {cmyk}{0, 0.87, 0.68, 0.32}
-\definecolor{CTlink}{named}{RoyalBlue} % RoyalBlue {cmyk}{1, 0.50, 0, 0}
-\definecolor{halfgray}{gray}{0.55} % chapter numbers will be semi transparent .5 .55 .6 .0
-\definecolor{webgreen}{rgb}{0,0.5,0}
-\definecolor{webbrown}{rgb}{0.6,0,0}
+\RequirePackage{xcolor}
+
+\definecolor{ling-cite}{rgb}{0,0.5,0} % WebGreen
+\definecolor{ling-url}{named}{Maroon} % Maroon
+\definecolor{ling-link}{named}{RoyalBlue} % RoyalBlue {cmyk}{1, 0.50, 0, 0}
 
 \RequirePackage{hyperref}
-\hypersetup{colorlinks=true,linktocpage=true,breaklinks=true,urlcolor=CTurl,linkcolor=CTlink,citecolor=CTcitation}
+\hypersetup{colorlinks=true,linktocpage=true,breaklinks=true,urlcolor=ling-url,linkcolor=ling-link,citecolor=ling-cite}
 
 \input{ling-common.def}
-% \input{ling-links.def}
-%
 
-% font setup
-% TODO conditionalise on xe/luatex
 \RequirePackage{microtype}
 \RequirePackage{fontspec}
-\PassOptionsToPackage{math-style=ISO}{unicode-math}
 \defaultfontfeatures{Scale=MatchLowercase}
 
 \setmainfont[%
@@ -67,8 +59,18 @@
 
 \setsansfont{Myriad Pro}
 
+\PassOptionsToPackage{math-style=french}{unicode-math}
 \RequirePackage{unicode-math}
 \setmathfont{STIX Two Math}
+\setmathfont{Minion Pro}[range=up]
+\setmathfont{Minion Pro Italic}[range=it]
+\setmathfont{Minion Pro Bold}[range=bfup]
+\setmathfont{Minion Pro Bold Italic}[range=bfit]
+\setmathfont{Myriad Pro}[range=sfup]
+\setmathfont{Myriad Pro Italic}[range=sfit]
+\setmathfont{Myriad Pro Bold}[range=bfsfup]
+\setmathfont{Myriad Pro Bold Italic}[range=bfsfit]
+\setmathfont{SF Mono}[range=tt]
 \setmonofont{SF Mono}
 \newfontfamily\headingfont[]{Myriad Pro Light}
 
@@ -91,24 +93,10 @@
 }%
 
 \renewcommand{\abstractnamefont}{\headingfont\normalsize}
-% \setlength{\abstitleskip}{-\absparindent}
-% \abstractrunin
-% \abslabeldelim{:\quad}
-% \setlength{\abstitleskip}{-1\absparindent}
-
-% \RequirePackage{xpatch}
-% \makeatletter
-% \xpatchcmd{\@maketitle}{\begin{center}}{\begin{flushleft}}{}{}
-% \xpatchcmd{\@maketitle}{\end{center}}{\end{flushleft}}{}{}
-% \xpatchcmd{\@maketitle}{\begin{tabular}[t]{c}}{\begin{tabular}[t]{@{}l@{}}}{}{}
-% \makeatother
-
-%
-%
 
 \makeheadstyles{lingpaper}{%
     \setsecheadstyle{\headingfont\MakeUppercase\large\raggedright}%
-    \setsubsecheadstyle{\headingfont\MakeUppercase\normalsize\raggedright}%
+    \setsubsecheadstyle{\headingfont\MakeUppercase\large\raggedright}%
     \setsubsubsecheadstyle{\headingfont\MakeUppercase\normalsize\raggedright}%
     \setparaheadstyle{\normalfont\normalsize\scshape\addperiod}%
     \setsubparaheadstyle{\normalfont\normalsize\scshape\addperiod}
@@ -117,6 +105,5 @@
 \counterwithout{section}{chapter}
 
 \headstyles{lingpaper}
-
 
 \input{ling-examples.def}
