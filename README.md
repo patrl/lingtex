@@ -50,7 +50,7 @@ when set up to work with xelatex and unicode math, as described [here](https://w
 
 #### `ling-paper`
 
-Uses `memoir` as the base class.
+Uses `scrartcl` as the base class.
 
 ### `ling-handout`
 
