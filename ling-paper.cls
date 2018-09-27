@@ -127,5 +127,7 @@
 % \AtBeginDocument{%
 %   \renewcommand{\bibname}{References}
 % }
+%
+\RequirePackage{gitinfo2}
 
 \input{ling-examples.def}
