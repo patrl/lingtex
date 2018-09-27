@@ -128,6 +128,7 @@
 %   \renewcommand{\bibname}{References}
 % }
 %
+\PassOptionsToPackage{mark}{gitinfo2}
 \RequirePackage{gitinfo2}
 
 \input{ling-examples.def}
