@@ -45,6 +45,7 @@
 
 % Simon Charlow's tower macro (https://gist.github.com/schar/2cd7de8af510e0cbeefb26720f389d59)
 % requires the booktabs package
+\RequirePackage{booktabs}
 \NewDocumentCommand\semtower{mm}{% a 2-level semantic tower
   \begin{tabular}[c]{@{\,}c@{\,}}
     \(#1\)

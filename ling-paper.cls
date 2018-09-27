@@ -1,22 +1,15 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{ling-paper}[2018/09/24 ling-paper]
 
-% load the base class
-\PassOptionsToClass{12pt,a4paper,oneside,article,openany}{memoir}
-\LoadClassWithOptions{memoir}
+\LoadClassWithOptions{scrartcl}
 
-% colors stolen from classicthesis:
-\PassOptionsToPackage{dvipsnames}{xcolor}
-\RequirePackage{xcolor}
-
-\definecolor{ling-cite}{rgb}{0,0.5,0} % WebGreen
-\definecolor{ling-url}{named}{Maroon} % Maroon
-\definecolor{ling-link}{named}{RoyalBlue} % RoyalBlue {cmyk}{1, 0.50, 0, 0}
-
-\RequirePackage{hyperref}
-\hypersetup{colorlinks=true,linktocpage=true,breaklinks=true,urlcolor=ling-url,linkcolor=ling-link,citecolor=ling-cite}
-
+\input{ling-links.def}
 \input{ling-common.def}
+
+% use sans serif for headings
+\setkomafont{disposition}{\normalcolor\headingfont\addfontfeature{Letters=Uppercase,Kerning=Uppercase}}
+\setkomafont{author}{\normalcolor\headingfont}
+\setkomafont{date}{\normalcolor\headingfont}
 
 \RequirePackage{microtype}
 \RequirePackage{fontspec}
@@ -74,36 +67,65 @@
 \setmonofont{SF Mono}
 \newfontfamily\headingfont[]{Myriad Pro Light}
 
-\pretitle{\begin{flushleft}\headingfont\addfontfeature{LetterSpace=20.0}\Huge}
-
-\posttitle{%
-  \par\end{flushleft}\vskip 0.5em
-}
-
-\preauthor{\begin{flushleft}
-\headingfont\large \lineskip%
-\begin{tabular}[t]{@{}l@{}}}%
-\postauthor{\end{tabular}\par\end{flushleft}}
-\predate{\begin{flushleft}\headingfont\addfontfeature{Letters=Uppercase,Kerning=Uppercase}\large}
-\postdate{\par\end{flushleft}}
-
+\RequirePackage{xpatch}
+\makeatletter
+\xpatchcmd{\@maketitle}{\begin{center}}{\begin{flushleft}}{}{}
+\xpatchcmd{\@maketitle}{\end{center}}{\end{flushleft}}{}{}
+\xpatchcmd{\@maketitle}{\begin{tabular}[t]{c}}{\begin{tabular}[t]{@{}l@{}}}{}{}
+\makeatother
 \renewcommand*\and{%
   \end{tabular}\\
   \begin{tabular}[t]{@{}l@{}}%
 }%
 
-\renewcommand{\abstractnamefont}{\headingfont\normalsize}
+% \pretitle{\begin{flushleft}\headingfont\addfontfeature{LetterSpace=20}\Huge}
 
-\makeheadstyles{lingpaper}{%
-    \setsecheadstyle{\headingfont\MakeUppercase\large\raggedright}%
-    \setsubsecheadstyle{\headingfont\MakeUppercase\large\raggedright}%
-    \setsubsubsecheadstyle{\headingfont\MakeUppercase\normalsize\raggedright}%
-    \setparaheadstyle{\normalfont\normalsize\scshape\addperiod}%
-    \setsubparaheadstyle{\normalfont\normalsize\scshape\addperiod}
-}
+% \posttitle{%
+%   \par\end{flushleft}\vskip 0.5em
+% }
 
-\counterwithout{section}{chapter}
+% \preauthor{\begin{flushleft}
+% \headingfont\large \lineskip%
+% \begin{tabular}[t]{@{}l@{}}}%
+% \postauthor{\end{tabular}\par\end{flushleft}}
+% \predate{\begin{flushleft}\headingfont\addfontfeature{Letters=Uppercase,Kerning=Uppercase}\large}
+% \postdate{\par\end{flushleft}}
 
-\headstyles{lingpaper}
+% \renewcommand*\and{%
+%   \end{tabular}\\
+%   \begin{tabular}[t]{@{}l@{}}%
+% }%
+
+% \renewcommand{\abstractnamefont}{\sffamily\addfontfeature{Letters=Uppercase,Kerning=Uppercase}\large\MakeUppercase}
+
+% \counterwithout{section}{chapter}
+
+% custom headers and footers
+% \makeevenhead{plain}{}{\fade{\sffamily{Draft: \today}}}{}
+% \makeoddhead{plain}{}{\fade{\sffamily{Draft: \today}}}{}
+% \makeevenhead{headings}{}{\fade{\sffamily{Draft: \today}}}{}
+% \makeoddhead{headings}{}{\fade{\sffamily{Draft: \today}}}{}
+% \makeevenfoot{plain}{}{\thepage}{}
+% \makeoddfoot{plain}{}{\thepage}{}
+% \makeevenfoot{headings}{}{\thepage}{}
+% \makeoddfoot{headings}{}{\thepage}{}
+
+% \makechapterstyle{ling-paper}{
+% \addtocounter{secnumdepth}{2}
+% \setsecheadstyle{\raggedright\sffamily\addfontfeature{Letters=Uppercase,Kerning=Uppercase}\Large\MakeUppercase}
+% \setsubsecheadstyle{\raggedright\sffamily\addfontfeature{Letters=Uppercase,Kerning=Uppercase}\large\MakeUppercase}
+% \setsubsubsecheadstyle{\raggedright\itshape}
+% }
+
+% \chapterstyle{ling-paper}
+
+% ensures that the bib heading is typeset as a section rather than a chapter in memoir with the article option
+% \defbibheading{bibliography}[\bibname]{%
+% \section*{#1}%
+% \markboth{#1}{#1}}
+
+% \AtBeginDocument{%
+%   \renewcommand{\bibname}{References}
+% }
 
 \input{ling-examples.def}
