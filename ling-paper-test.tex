@@ -88,6 +88,24 @@ See \citet{heim_presupposition_1992,heim1997,heim1994,heimThesis}.
 ⦃iii⦄
 \]
 
+\section{Inquisitive diagram test}
+
+  \begin{figure}
+\begin{tikzpicture}[>=latex,scale=.8]
+    % Possibilities
+    \draw[opaque,rounded corners]
+    (-1.8,0) -- (-1.8,1.8) -- (1.8, 1.8) -- (1.8,.8)
+    -- (-.8,-1.8) -- (-1.8,-1.8) -- (-1.8,0);
+
+    % Indices
+    \draw (-1,1) node[index gray] (yy) {$11$};
+    \draw (1,1) node[index gray] (yn) {$10$};
+    \draw (-1,-1) node[index gray] (ny) {$01$};
+    \draw (1,-1) node[index gray] (nn) {$00$};
+
+  	\end{tikzpicture}
+    \end{figure}
+
 % TODO fix heading here
 \printbibliography
 
