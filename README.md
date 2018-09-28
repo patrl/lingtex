@@ -27,7 +27,8 @@ OSX as a system font.
 
 - Main font: [Minion Pro](https://typekit.com/fonts/minion)
 - Sans serif: [Myriad Pro](https://typekit.com/fonts/myriad)
-- Math: [STIX2](https://sourceforge.net/projects/stixfonts/)
+- Math: Currently uses a ramshackle combination of Libertinus Math, Minion,
+  Myriad, San Francisco, and [STIX2](https://sourceforge.net/projects/stixfonts/).
 - Monospace: [San Francisco Mono](https://github.com/ZulwiyozaPutra/SF-Mono-Font)
 
 ### Details
@@ -50,7 +51,10 @@ when set up to work with xelatex and unicode math, as described [here](https://w
 
 #### `ling-paper`
 
-Uses `scrartcl` as the base class.
+Uses `scrartcl` as the base class. Watermarked with the current git revision via
+`gitinfo2`. This requires a bit of a manual intervention, so see the [gitinfo2
+documentation](http://mirrors.ctan.org/macros/latex/contrib/gitinfo2/gitinfo2.pdf)
+for information about how to set up the relevant hooks.
 
 ### `ling-handout`
 
