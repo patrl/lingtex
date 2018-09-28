@@ -88,21 +88,21 @@
   \PassOptionsToPackage{math-style=ISO}{unicode-math}
   \RequirePackage{unicode-math}
   % \setmathfont{STIX Two Math}
-  \setmathfont{libertinusmath-regular.otf}
+  % \setmathfont{libertinusmath-regular.otf}
   % \setmathfont[version=bold]{libertinusmath-bold.otf}
-  \setmathfont{STIX Two Math}[range={\lBrace,\rBrace}]
+  \setmathfont{STIX Two Math}%[range={\lBrace,\rBrace}]
   % \setmathfont[version=bold]{libertinusmath-bold.otf}
-  \setmathfont{Minion Pro}[range=up]
-  \setmathfont{Minion Pro Italic}[range=it]
-  \setmathfont{Minion Pro Bold}[range=bfup]
-  \setmathfont{Minion Pro Bold Italic}[range=bfit]
-  \setmathfont{Cronos Pro}[range=sfup]
-  \setmathfont{Cronos Pro Italic}[range=sfit]
-  \setmathfont{Cronos Pro Bold}[range=bfsfup]
-  \setmathfont{Cronos Pro Bold Italic}[range=bfsfit]
-  \setmathfont{Minion Pro Italic}[range={scr,bfscr,cal,bfcal},Contextuals=Swash]
-  \setmathfont{SF Mono}[range=tt]
-  \setmonofont{SF Mono}
+  % \setmathfont{Minion Pro}[range=up]
+  % \setmathfont{Minion Pro Italic}[range=it]
+  % \setmathfont{Minion Pro Bold}[range=bfup]
+  % \setmathfont{Minion Pro Bold Italic}[range=bfit]
+  % \setmathfont{Cronos Pro}[range=sfup]
+  % \setmathfont{Cronos Pro Italic}[range=sfit]
+  % \setmathfont{Cronos Pro Bold}[range=bfsfup]
+  % \setmathfont{Cronos Pro Bold Italic}[range=bfsfit]
+  % \setmathfont{Minion Pro Italic}[range={scr,bfscr,cal,bfcal},Contextuals=Swash]
+  % \setmathfont{SF Mono}[range=tt]
+  % \setmonofont{SF Mono}
   % \newfontfamily\headingfont[]{Myriad Pro Light}
 }%
 {%
