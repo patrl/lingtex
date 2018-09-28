@@ -22,7 +22,7 @@ directory as your `.tex` file.
 
 ### Font prerequisites
 
-Everything except for STIX2 should be available on, e.g., a recent version of
+Everything except for STIX2 and Cronos Pro should be available on, e.g., a recent version of
 OSX as a system font.
 
 - Main font: [Minion Pro](https://typekit.com/fonts/minion)
