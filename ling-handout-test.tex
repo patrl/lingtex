@@ -1,10 +1,10 @@
-\documentclass[12pt,paper=a4,DIV=15]{ling-handout}
+\documentclass[twocolumn,landscape,12pt,paper=a4,DIV=15]{ling-handout}
 
 \usepackage{kantlipsum}
 
 \addbibresource[location=remote]{/home/patrl/GitHub/bibliography/elliott_mybib.bib}
 
-\title{Handout title}
+\title{\texttt{ling-handout} example}
 
 \author{Patrick D.\,Elliott}
 
@@ -14,47 +14,102 @@
 
 \section{Introduction}
 
-\begin{frame}{test frame}
+\begin{frame}{Background}
 
-\begin{itemize}
+  In D(istributed)M(orphology) (\citealt{halle1993,halle2000}, etc.) properties
+  which were traditionally the preserve of individual lexical items are
+  distributed across different components of the grammar.
 
-\item \kant[1]
-
-\item \kant[2]
-
-\item \citet{fox-sub22,fox2007fc,Fox2007,barLevFox2017,fox_economy_2018}
-
-\end{itemize}
+  Their are no categorised lexical items in DM. Formatives - the atoms of
+  computation - consist of syntactic feature bundles and \emph{roots} (labelled
+  \dmroot{}). Roots are the locus of idiosyncrasy in the grammar.
+  %
+  \begin{center}
+    \scalebox{0.8}{
+    \begin{forest}
+      [{n}
+        [{n}]
+        [{\dmroot{dog}}]
+      ]
+    \end{forest}
+    %
+    \hspace{3em}
+    %
+    \begin{forest}
+      [{v}
+        [{v}]
+        [{\dmroot{dog}}]
+      ]
+    \end{forest}
+    %
+    \hspace{3em}
+    %
+    \begin{forest}
+      [{v}
+      [{v}]
+      [{...}
+        [{\sc pl}]
+        [{\dmroot{person}}]
+      ]]
+    \end{forest}
+  }
+  %
+\end{center}
+%
+    Forms and meanings are assigned to leaves of the tree via post-syntactic
+    spellout rules.
 
 \end{frame}
 
-\begin{frame}{some math}
+\begin{frame}{Overview}
 
-\ex
-\(\eval{and\(_{\type{τ → τ → τ}}\)} = \begin{cases}
-∧ &\type{τ = t}\\
-λ P_{\type{ρ → σ}} . λ Q_{\type{ρ → σ}} . λx_{\type{ρ}} . \eval{and\(_{\type{σ → σ → σ}}\)} (P x) (Q x) & \type{τ = ρ → σ}
-\end{cases}\)
-\xe
+  \begin{block}{Question at center of this talk:}
+    \[
+      \evaluation{\dmroot{}} = ???
+    \]
+  \end{block}
+
+  \begin{block}{Answer suggested here:}
+
+    \begin{itemize}
+
+      \item Roots are never argument-taking; they simply denote predicates of type \type{\langle e,t
+          \rangle}
+
+      \item $D_{\type{e}}$ includes not only individuals but also events,
+        times, etc. Categorizers are/can be responsible for further restriction.
+
+      \item An intuitive way of thinking about this: roots are polymorphic
+        predicates; categorizers are responsible for typing.
+
+    \end{itemize}
+
+  \end{block}
 
 \end{frame}
 
-\begin{frame}{some code}
+\begin{frame}
 
-\begin{minted}[linenos,tabsize=2,breaklines]{haskell}
-newtype CCP a = CCP { (>>-) :: (G Identity a -> G Identity T) -> G Identity T }
+  \begin{block}{Empirical focus:}
+    Varieties of nominalizations, and nominalization of clausal-embedding verbs.
+  \end{block}
 
-instance Functor CCP where
-  fmap f cx = CCP $ \k -> cx >>- \x -> k (fmap f x)
+  \metroset{block=transparent}
 
-instance Applicative CCP where
-  pure a = CCP $ \k -> k (pure a)
-  cf <*> cx = CCP $ \k -> cf >>- \f -> cx >>- \x -> k (f <*> x)
-
-instance Monad CCP where
-  return = pure
-  cgx >>= f = CCP $ \k -> cgx >>- \gx -> gx >>= (\x -> f x >>- k)
-\end{minted}
+  \begin{block}{Roadmap}
+    \begin{itemize}
+    \item \citeposs{grimshaw_argument_1990} partitioning of
+      nominalizations into Complex Event Nominals, Simple Event Nominals, and
+      Result Nominals.
+      \item \citeposs{moulton2014} analysis of nominalizations in terms of
+        argument-taking roots.
+      \item Clausal-embedding verbs and (the unavailability of) Complex Event
+        Nominals.
+      \item \citeauthor{elliott2016}'s (\citeyear{elliott2016,elliott2017_sub})
+        account of clausal embedding.
+      \item Analysis of nominalizations with roots as predicates.
+    \end{itemize}
+  \end{block}
 
 \end{frame}
 

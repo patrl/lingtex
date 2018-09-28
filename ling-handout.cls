@@ -4,10 +4,11 @@
 % load the base class
 \LoadClassWithOptions{scrartcl}
 
-\input{ling-common.def}
 \input{ling-links.def}
+\input{ling-common.def}
 
-\usepackage{beamerarticle}
+\PassOptionsToPackage{noxcolor}{beamerarticle}
+\RequirePackage{beamerarticle}
 % \usebeamercolortheme[snowy]{owl}
 
 % use sans serif for headings
