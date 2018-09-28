@@ -26,9 +26,9 @@ Everything except for STIX2 should be available on, e.g., a recent version of
 OSX as a system font.
 
 - Main font: [Minion Pro](https://typekit.com/fonts/minion)
-- Sans serif: [Myriad Pro](https://typekit.com/fonts/myriad)
+- Sans serif: [Cronos Pro](https://typekit.com/fonts/cronos)
 - Math: Currently uses a ramshackle combination of Libertinus Math, Minion,
-  Myriad, San Francisco, and [STIX2](https://sourceforge.net/projects/stixfonts/).
+  Cronos, San Francisco, and [STIX2](https://sourceforge.net/projects/stixfonts/).
 - Monospace: [San Francisco Mono](https://github.com/ZulwiyozaPutra/SF-Mono-Font)
 
 ### Details
