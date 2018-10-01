@@ -1,7 +1,17 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{ling-paper}[2018/09/24 ling-paper]
 
-\LoadClassWithOptions{scrartcl}
+\RequirePackage{ifthen}
+\RequirePackage{scrbase}
+\DefineFamily{ling}
+\DefineFamilyMember{ling}
+\FamilyBoolKey{ling}{cronos}{ling@cronos}
+\FamilyProcessOptions{ling}
+
+% TODO: add key-value options using l3keys2e
+
+\PassOptionsToClass{a4paper,12pt}{scrartcl}
+\LoadClass{scrartcl}
 
 \input{ling-links.def}
 \input{ling-common.def}
@@ -51,6 +61,7 @@
     },
   },
   ]{Minion Pro}
+  \ifthenelse{\boolean{ling@cronos}}{%
   \setsansfont[%
   UprightFeatures={
     SizeFeatures={
@@ -84,7 +95,10 @@
       {Size={19.9-},Font=CronosPro-BoldDispIt}
     },
   },
-  ]{Cronos Pro}
+  ]{Cronos Pro}}%
+  {
+    \setsansfont{Myriad Pro}
+  }
   \PassOptionsToPackage{math-style=ISO}{unicode-math}
   \RequirePackage{unicode-math}
   % \setmathfont{STIX Two Math}

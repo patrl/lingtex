@@ -22,14 +22,16 @@ directory as your `.tex` file.
 
 ### Font prerequisites
 
-Everything except for STIX2 and Cronos Pro should be available on, e.g., a recent version of
-OSX as a system font.
+Everything except for STIX2 should be available on, e.g., a recent version of
+OSX as a system font. 
 
 - Main font: [Minion Pro](https://typekit.com/fonts/minion)
-- Sans serif: [Cronos Pro](https://typekit.com/fonts/cronos)
-- Math: Currently uses a ramshackle combination of Libertinus Math, Minion,
-  Cronos, San Francisco, and [STIX2](https://sourceforge.net/projects/stixfonts/).
+- Sans serif: [Myriad Pro](https://typekit.com/fonts/cronos)
+- Math: [STIX2](https://sourceforge.net/projects/stixfonts/).
 - Monospace: [San Francisco Mono](https://github.com/ZulwiyozaPutra/SF-Mono-Font)
+
+Note that the sans font can be set to the commercial font Cronos Pro, if the
+option `cronos` is passed to `ling-paper`.
 
 ### Details
 
