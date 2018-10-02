@@ -1,14 +1,12 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{ling-paper}[2018/09/24 ling-paper]
 
-\RequirePackage{ifthen}
 \RequirePackage{scrbase}
 \DefineFamily{ling}
 \DefineFamilyMember{ling}
 \FamilyBoolKey{ling}{cronos}{ling@cronos}
+\FamilyBoolKey{ling}{git}{ling@git}
 \FamilyProcessOptions{ling}
-
-% TODO: add key-value options using l3keys2e
 
 \PassOptionsToClass{a4paper,12pt}{scrartcl}
 \LoadClass{scrartcl}
@@ -23,7 +21,7 @@
 
 \RequirePackage{microtype}
 
-\ifengineTF{\xetexengine || \luatexengine}%
+\ifthenelse{\boolean{xetex}\OR\boolean{luatex}}
 {%
   \RequirePackage{fontspec}
   \defaultfontfeatures{Scale=MatchLowercase}
