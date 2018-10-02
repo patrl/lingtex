@@ -3,19 +3,12 @@
 % necessary for custom macros
 \RequirePackage{xparse}
 
-% some commands to check which engine is being used
-\ExplSyntaxOn
-\cs_new_eq:NN \pdftexengine \sys_if_engine_pdftex_p:
-\cs_new_eq:NN \xetexengine  \sys_if_engine_xetex_p:
-\cs_new_eq:NN \luatexengine \sys_if_engine_luatex_p:
-\cs_new_eq:NN \ptexengine   \sys_if_engine_ptex_p:
-\cs_new_eq:NN \uptexengine  \sys_if_engine_uptex_p:
+% conditionals
+\RequirePackage{ifthen}
 
-\NewExpandableDocumentCommand{\ifengineTF}{mmm}
- {
-  \bool_if:nTF { #1 } { #2 } { #3 }
- }
-\ExplSyntaxOff
+% checking for xetex/luatex
+\RequirePackage{ifxetex}
+\RequirePackage{ifluatex}
 
 % trees
 \PassOptionsToPackage{linguistics}{forest}
