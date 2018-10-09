@@ -1,8 +1,5 @@
 \ProvidesFile{ling-common.def}[2018/09/24 Common code for the lingtex classes]
 
-% necessary for custom macros
-\RequirePackage{xparse}
-
 % conditionals
 \RequirePackage{ifthen}
 
@@ -50,9 +47,13 @@
 \RequirePackage{todonotes}
 \RequirePackage{csquotes}
 
+% necessary for custom macros
+\RequirePackage{xparse}
+
+\RequirePackage{booktabs}
+
 % Simon Charlow's tower macro (https://gist.github.com/schar/2cd7de8af510e0cbeefb26720f389d59)
 % requires the booktabs package
-\RequirePackage{booktabs}
 \NewDocumentCommand\semtower{mm}{% a 2-level semantic tower
   \begin{tabular}[c]{@{\,}c@{\,}}
     \(#1\)
@@ -72,6 +73,7 @@
   \end{tabular}
 }
 
+% inquisitive diagrams stuff
 \tikzstyle{index on}=[inner sep=2pt, white, circle, fill=black]
 \tikzstyle{index off}=[inner sep=2pt, black, circle, draw]
 \tikzstyle{index gray}=[inner sep=2pt, black, circle, fill=lightgray]
@@ -108,6 +110,7 @@
 \NewDocumentCommand\strawsonEntails{}{\ensuremath{⊧_S}}
 \NewDocumentCommand\nstrawsonEntails{}{\ensuremath{̸⊧_S}}
 \NewDocumentCommand\fade{m}{\textcolor{gray}{#1}}
+\NewDocumentCommand\bind{}{\ensuremath{≫\!\!=}}
 
 %%% Local Variables:
 %%% mode: latex
