@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{ling-paper}[2018/09/24 ling-slides]
+\ProvidesClass{ling-slides}[2018/09/24 ling-slides]
 
 % load the base class
 \LoadClassWithOptions{beamer}
